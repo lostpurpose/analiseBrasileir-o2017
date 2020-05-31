@@ -53,18 +53,18 @@ table.sort(vet, function(a, b)
                     return true
                   elseif a.score.p < b.score.p then
                     return false
-                  elseif a.score.p == b.score.p and a.score.v > b.score.v then
+                  elseif a.score.v > b.score.v then
                     return true
-                  elseif a.score.p == b.score.p and a.score.v < b.score.v then
+                  elseif a.score.v < b.score.v then
                     return false
-                  elseif a.score.p == b.score.p and a.score.v == b.score.v and a.score.s > b.score.s then
+                  elseif a.score.s > b.score.s then
                     return true
-                  elseif a.score.p == b.score.p and a.score.v == b.score.v and a.score.s < b.score.s then
+                  elseif a.score.s < b.score.s then
                     return false
-                  elseif a.score.p == b.score.p and a.score.v == b.score.v and a.score.s == b.score.s and a.score.g > b.score.g then
+                  elseif a.score.g > b.score.g then
                     return true
-                  elseif a.score.p == b.score.p and a.score.v == b.score.v and a.score.s == b.score.s and a.score.g < b.score.g then
-                    return false
+                  else 
+                    return a.score.g > b.score.g 
                   end
                 end)
 end
